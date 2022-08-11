@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица студентов</title>
+    <link href="CSS/normalize.css" rel="stylesheet" type="text/css">
+    <link href="CSS/new.css" rel="stylesheet" type="text/css">
+    <link href="CSS/students_table.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body">
+    <div class="container">       
+        <h1>Данные студентов</h1>
+        <h3>Показать студентов</h3>
+        <div class="vertical_flex">
+        <form class="filter vertical_flex">
+            <div class="horizontal_flex">
+                <div class="vertical_flex">
+                    <label class="label">по фрагменту ФИО</label>
+                    <input class="input name_filter" type="text">
+                </div>
+                <div class="vertical_flex">
+                    <label class="label">по фрагменту названия факультета</label>
+                    <input class="input faculty_filter" type="text">
+                </div>
+                <div class="vertical_flex">
+                    <label class="label">по году начала обучения</label>
+                    <input class="input studying_start_filter" type="number">
+                </div>
+                <div class="vertical_flex">
+                    <label class="label">по году окончания обучения</label>
+                    <input class="input graduated_filter" type="number">
+                </div>   
+            </div>         
+            
+        </form>
+        <button class="btn reset_filter_btn">Сбросить фильтры и показать всех студентов</button>
+        <table class="table">
+            <tr>
+                <th class="FIO_heading">ФИО студента</th>
+                <th class="faculty_heading">Факультет</th>
+                <th class="birth_heading">Дата рождения и возраст</th>
+                <th class="education_years_heading">Годы обучения</th>
+            </tr>
+        </table>
+    </div>
+        <h2>Добавить данные студента в таблицу</h2>
+
+        <form class="form" autocomplete="on">
+            <div class="horizontal_flex">
+                <div class="vertical_flex">
+                    <label class="label">Фамилия</label>
+                    <input class="input text_input surname_input" type="text">
+                    <span class="wrong_surname_message input__error_message display_none">Фамилия содержит недопустимые символы</span>
+                    <span class="fill_surname_message input__error_message display_none">Заполните поле</span>
+                    <span class="short_surname_message input__error_message display_none">Фамилия слишком короткая</span>
+                </div>
+                <div class="vertical_flex">
+                    <label class="label">Имя</label>
+                    <input class="input text_input name_input" type="text">
+                    <span class="wrong_name_message input__error_message display_none">Имя содержит недопустимые символы</span>
+                    <span class="fill_name_message input__error_message display_none">Заполните поле</span>
+                    <span class="short_name_message input__error_message display_none">Имя слишком короткое</span>
+                </div>
+                <div class="vertical_flex">
+                    <label class="label">Отчество</label>
+                    <input class="input text_input second_name_input" type="text">
+                    <span class="wrong_secondname_message input__error_message display_none">Отчество содержит недопустимые символы</span>
+                    <span class="fill_secondname_message input__error_message display_none">Заполните поле</span>
+                    <span class="short_secondname_message input__error_message display_none">Отчество слишком короткое</span>
+                </div>
+                <div class="vertical_flex">
+                    <label class="label">Дата рождения</label>
+                    <input class="input birth_input" type="date" min="01.01.1900">
+                    <span class="wrong_birth_message input__error_message display_none">Год рождения не должен быть менее 1900 или больше текущего</span>
+                    <span class="fill_birth_message input__error_message display_none">Заполните поле</span>
+                    <span class="wrong_year_message input__error_message display_none">Даже вундеркинды не начинают учёбу в университете раньше 9-летнего возраста</span>
+                </div>
+                <div class="vertical_flex">
+                    <label class="label">Год начала обучения</label>
+                    <input class="input studying_start_input" type="number">
+                    <span class="wrong_studying_message input__error_message display_none">Год начала обучения не должен быть менее 2000 или больше текущего</span>
+                    <span class="fill_studying_message input__error_message display_none">Заполните поле</span>
+                </div>
+                <div class="vertical_flex">
+                    <label class="label">Факультет</label>
+                    <select class="select faculty_select">
+                        <option>Вычислительной математики и кибернетики</option>
+                        <option>Географический</option>
+                        <option>Журналистики</option>
+                        <option>Иностранных Языков</option>
+                        <option>Механико-математический</option>
+                        <option>Физико-химический</option>
+                        <option>Экономический</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn add_btn">Добавить</button>
+        </form>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

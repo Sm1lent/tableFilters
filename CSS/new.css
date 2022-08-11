@@ -1,0 +1,36 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input, button, select {
+    border:none;
+    background: none;
+    outline: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    padding: 0;
+}
+
+.horizontal_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vertical_flex {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.display_none {
+   display: none;
+}
